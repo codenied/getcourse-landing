@@ -1,0 +1,811 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>GetCourse-Market</title>
+  <link rel="stylesheet" href="./style.css">
+  <script src="./script.js" type="text/javascript" defer></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200;300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick-theme.min.css">
+  <script type="text/javascript" src="http://cdn.jsdelivr.net/jquery.slick/1.3.15/slick.min.js"></script>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="page">
+    <div class="hero">
+      <div class="cover">
+        <img src="assets/images/hero-bg.png" alt="hero background" loading="lazy">
+      </div>
+      <div class="content">
+        <header class="header">
+          <div class="logo">
+            <img src="assets/images/getcourse-logo-large.svg" alt="getcourse logo" loading="lazy">
+          </div>
+          <div class="menu-btn">
+            <div class="logo">
+              <img src="assets/images/menu-btn.png" alt="" loading="lazy">
+            </div>
+            <span>Лучшие курсы</span>
+            <div class="burger">
+              <div class="line"></div>
+              <div class="line"></div>
+              <div class="line"></div>
+            </div>
+          </div>
+        </header>
+        <section class="section hero-section">
+          <div class="info">
+            <div class="info-main">
+              <div>
+                <div class="rating">
+                  <ul class="list">
+                    <li><img src="/assets/icons/star.svg" alt="rate star" loading="lazy"></li>
+                    <li><img src="/assets/icons/star.svg" alt="rate star" loading="lazy"></li>
+                    <li><img src="/assets/icons/star.svg" alt="rate star" loading="lazy"></li>
+                    <li><img src="/assets/icons/star.svg" alt="rate star" loading="lazy"></li>
+                    <li><img src="/assets/icons/star.svg" alt="rate star" loading="lazy"></li>
+                  </ul>
+                  <span>4,7</span>
+                </div>
+              </div>
+              <div class="tags">
+                <ul>
+                  <li><span>Онлайн-курс</span></li>
+                  <li><span>Для начинающих</span></li>
+                  <li><span>С Куратором</span></li>
+                </ul>
+              </div>
+              <h1 class="title">
+                Просто о фото: 33 урока о базовых настройках
+              </h1>
+              <div class="badges">
+                <div class="badge">
+                  <span>СТАРТ: 25 НОЯБРЯ 18:00 МСК</span>
+                </div>
+                <div class="badge">
+                  <div class="badge-img">
+                    <img src="/assets/icons/certificate.svg" alt="certificate icon" loading="lazy" />
+                  </div>
+                  <span>Сертификат</span>
+                </div>
+              </div>
+              <p class="text">
+                Освоение фундамента, который должен знать фотограф, чтобы делать задуманные кадры в разных условиях.
+              </p>
+            </div>
+            <div class="stats">
+              <ul>
+                <li>
+                  <p class="text">5 613</p>
+                  <div>
+                    <div class="icon">
+                      <img src="/assets/icons/student.svg" alt="students">
+                    </div>
+                    <p>учеников</p>
+                  </div>
+                </li>
+                <li>
+                  <p class="text">126</p>
+                  <div>
+                    <div class="icon">
+                      <img src="/assets/icons/image.svg" alt="works">
+                    </div>
+                    <p>работ</p>
+                  </div>
+                </li>
+                <li>
+                  <p class="text">52</p>
+                  <div>
+                    <div class="icon">
+                      <img src="/assets/icons/testimonial.svg" alt="testimonails">
+                    </div>
+                    <p>отзывов</p>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="description">
+            <div class="video-preview" data-url="https://video-link.mp4">
+              <div class="video-preview-action">
+                <span>Смотреть<br /> видео</span>
+                <div class="video-preview-icon">
+                  <img src="/assets/icons/video-pause.svg" alt="play video">
+                </div>
+              </div>
+              <img src="/assets/images/course-video-preview.png" alt="video preview">
+            </div>
+            <div class="course-info">
+              <div class="author-image">
+                <img src="/assets/images/course-author.png" alt="course author image" loading="lazy">
+              </div>
+              <div class="author-info">
+                <div class="author-info-name">
+                  <h3>Александра Александрова</h3>
+                  <div class="mark">
+                    <img src="/assets/icons/verificated.svg" alt="user verificated" loading="lazy">
+                  </div>
+                </div>
+                <div class="author-info-stats">
+                  <p class="author-info-specs">Школа вязания Клуб-ОК</p>
+                  <div class="stats">
+                    <ul>
+                      <li>
+                        <div>
+                          <div class="icon">
+                            <img src="/assets/icons/student.svg" alt="students" loading="lazy">
+                          </div>
+                          <p>35 654 </p>
+                        </div>
+                      </li>
+                      <li>
+                        <div>
+                          <div class="icon">
+                            <img src="/assets/icons/image.svg" alt="works" loading="lazy">
+                          </div>
+                          <p>256</p>
+                        </div>
+                      </li>
+                      <li>
+                        <div>
+                          <div class="icon">
+                            <img src="/assets/icons/testimonial.svg" alt="testimonails" loading="lazy">
+                          </div>
+                          <p>25</p>
+                        </div>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
+    </div>
+    <main class="main">
+      <div class="wrapper">
+        <nav>
+          <ul>
+            <li><a href="#course">О курсе</a></li>
+            <li><a href="#gives">Что получите</a></li>
+            <li><a href="#for-who">Для кого</a></li>
+            <li><a href="#author">Автор</a></li>
+            <li><a href="#programm">Программа</a></li>
+            <li><a href="#works">Работы</a></li>
+            <li><a href="#testimonials">Отзывы</a></li>
+            <li><a href="#school">Школа</a></li>
+          </ul>
+        </nav>
+        <div class="main-grid">
+          <div class="left">
+            <section class="section gives" id="gives">
+              <h3>Что вы получите</h3>
+              <ul class="gives-list">
+                <li>
+                  <p>
+                    Разберетесь с 3-мя главными параметрами ручной съемки
+                  </p>
+                </li>
+                <li>
+                  <p>
+                    Изучите основные правила композиции и света
+                  </p>
+                </li>
+                <li>
+                  <p>
+                    Начнете разбираться в фототехнике и научитесь подбирать ее
+                  </p>
+                </li>
+                <li>
+                  <p>
+                    Подружитесь со светом и начнете снимать в разных условиях
+                  </p>
+                </li>
+                <li>
+                  <p>
+                    Научитесь работать с программой Photoshop
+                  </p>
+                </li>
+              </ul>
+              <div class="quote">
+                <p class="quote-title">
+                  Главный результат
+                </p>
+                <p class="quote-description">
+                  Перестанете воевать с фокусом и настройками камеры.<br />
+                  Будете быстро и уверенно настраивать фотоаппарат.
+                </p>
+              </div>
+              <div>
+                <h4>Дипломы и сертификаты</h4>
+                <ul class="diplom-list">
+                  <li>
+                    <div class="diplom-list-image">
+                      <img src="/assets/images/diploma13.jpg" alt="diploma" loading="lazy">
+                    </div>
+                    <p class="diplom-list-type">
+                      Сертификат
+                    </p>
+                    <p class="diplom-list-title">
+                      Название сертификата
+                    </p>
+                    <p class="diplom-list-text">
+                      Описание условий. Кому при каких условиях выдается сертификат. Чем он хорош и поможет ученику после прохождения курса.
+                    </p>
+                  </li>
+                  <li>
+                    <div class="diplom-list-image">
+                      <img src="/assets/images/diploma14.jpg" alt="diploma" loading="lazy">
+                    </div>
+                    <p class="diplom-list-type">
+                      Диплом
+                    </p>
+                    <p class="diplom-list-title">
+                      Название диплома
+                    </p>
+                    <p class="diplom-list-text">
+                      Описание условий. Кому при каких условиях выдается этот диплом. Чем он хорош и поможет ученику после прохождения курса.                </p>
+                  </li>
+                  <li>
+                    <div class="diplom-list-image">
+                      <img src="/assets/images/diploma15.jpg" alt="diploma" loading="lazy">
+                    </div>
+                    <p class="diplom-list-type">
+                      Диплом
+                    </p>
+                    <p class="diplom-list-title">
+                      Название другого диплома
+                    </p>
+                    <p class="diplom-list-text">
+                      Описание условий. Кому при каких условиях выдается этот диплом. Чем он хорош и поможет ученику после прохождения курса.
+                    </p>
+                  </li>
+                </ul>
+              </div>
+            </section>
+            <section class="section for-who" id="for-who">
+              <h3>Для кого этот курс</h3>
+              <div class="expand">
+                <div class="expand-container">
+                  <p class="for-who-description">
+                    Для тех кто хочет научиться. Дальше перечисляем ключевые боли, проблемы, страхи с которыми хочется справиться участник прийдя на курс. Для тех кто хочет научиться. Дальше перечисляем ключевые боли, проблемы, страхи с которыми хочется справиться участник прийдя на курс. Для тех кто хочет научиться. Дальше перечисляем ключевые боли, проблемы, страхи с которыми хочется справиться
+                    Для тех кто хочет научиться. Дальше перечисляем ключевые боли, проблемы, страхи с которыми хочется справиться участник прийдя на курс. Для тех кто хочет научиться. Дальше перечисляем ключевые боли, проблемы, страхи с которыми хочется справиться участник прийдя на курс. Для тех кто хочет научиться. Дальше перечисляем ключевые боли, проблемы, страхи с которыми хочется справиться
+                  </p>
+                </div>
+                <div class="expand-action">
+                  <span>Показать еще:</span>
+                  <div>
+                    <img src="/assets/icons/arrow-down.svg" alt="expand icon" loading="lazy">
+                  </div>
+                </div>
+              </div>
+            </section>
+            <section class="section author" id="author">
+              <div class="author-wrapper">
+                <div class="author-inner">
+                  <div class="author-data">
+                    <div class="author-heading">
+                      <h3>Автор</h3>
+                      <div class="author-heading-name">
+                        <h3>Лариса Хливнюк</h3>
+                        <div class="mark">
+                          <img src="/assets/icons/verificated.svg" alt="user verificated" loading="lazy">
+                        </div>
+                      </div>
+                    </div>
+                    <div class="expand">
+                      <div class="expand-container">
+                        <p class="author-heading-description">
+                          Основательница онлайн школы вязания с 27-летним опытом в сфере рукоделия
+                          Создатель 2 больших обучающих курсов по вязанию крючком: для новичков и продолжающих и мини-курса для начинающих
+                          Создатель 2 больших обучающих курсов по вязанию крючком: для новичков и продолжающих и мини-курса для начинающих
+                        </p>
+                      </div>
+                      <div class="expand-action">
+                        <span>Показать еще:</span>
+                        <div>
+                          <img src="/assets/icons/arrow-down.svg" alt="expand icon" loading="lazy">
+                        </div>
+                      </div>
+                    </div>
+                    <div class="achieves">
+                      <h3>Опыт и достижения</h3>
+                      <ul class="achieves-list">
+                        <li>
+                          <div class="achieves-list-icon">
+                            <img src="/assets/icons/star.svg" alt="star icon" loading="lazy">
+                          </div>
+                          <p class="achieves-list-number">
+                            27
+                          </p>
+                          <p class="achieves-list-desc">
+                            Лет, опыт вязания
+                          </p>
+                        </li>
+                        <li>
+                          <div class="achieves-list-icon">
+                            <img src="/assets/icons/star.svg" alt="star icon" loading="lazy">
+                          </div>
+                          <p class="achieves-list-number">
+                            2 000
+                          </p>
+                          <p class="achieves-list-desc">
+                            Выпускников школы
+                          </p>
+                        </li>
+                        <li>
+                          <div class="achieves-list-icon">
+                            <img src="/assets/icons/star.svg" alt="star icon" loading="lazy">
+                          </div>
+                          <p class="achieves-list-number">
+                            54
+                          </p>
+                          <p class="achieves-list-desc">
+                            Собственних техник вязания
+                          </p>
+                        </li>
+                        <li>
+                          <div class="achieves-list-icon">
+                            <img src="/assets/icons/star.svg" alt="star icon" loading="lazy">
+                          </div>
+                          <p class="achieves-list-number">
+                            2
+                          </p>
+                          <p class="achieves-list-desc">
+                            Больших обучающих курса
+                          </p>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                  <div class="author-preview">
+                    <div class="author-preview-slider">
+                      <div class="author-preview-slide">
+                        <div class="video-preview" data-url="https://video-link.mp4">
+                          <div class="video-preview-action">
+                            <span>ВИДЕО<br />
+                              ОБ АВТОРЕ
+                            </span>
+                            <div class="video-preview-icon">
+                              <img src="/assets/icons/video-pause.svg" alt="play video">
+                            </div>
+                          </div>
+                          <img src="/assets/images/course-video-preview.png" alt="video preview">
+                        </div>
+                      </div>
+                      <div class="author-preview-slide">
+                        <div class="video-preview" data-url="https://video-link.mp4">
+                          <div class="video-preview-action">
+                            <span>ВИДЕО<br />
+                              ОБ АВТОРЕ
+                            </span>
+                            <div class="video-preview-icon">
+                              <img src="/assets/icons/video-pause.svg" alt="play video">
+                            </div>
+                          </div>
+                          <img src="/assets/images/course-video-preview.png" alt="video preview">
+                        </div>
+                      </div>
+                      <div class="author-preview-slide">
+                        <div class="video-preview" data-url="https://video-link.mp4">
+                          <div class="video-preview-action">
+                            <span>ВИДЕО<br />
+                              ОБ АВТОРЕ
+                            </span>
+                            <div class="video-preview-icon">
+                              <img src="/assets/icons/video-pause.svg" alt="play video">
+                            </div>
+                          </div>
+                          <img src="/assets/images/course-video-preview.png" alt="video preview">
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="author-works">
+                  <h3>Работы автора</h3>
+                  <ul class="author-works-list">
+                    <li>
+                      asd
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </section>
+            <section class="section program" id="program">
+              <div class="program-heading">
+                <h3>Программа</h3>
+                <div class="program-heading-schedule">
+                  <div class="program-heading-schedule-content">
+                    <p class="program-heading-schedule-desc">
+                      Уроков<br />
+                      Доступ
+                    </p>
+                    <p class="program-heading-schedule-text">
+                      22-26<br />
+                      12 мес.
+                    </p>
+                    <div class="program-divider"></div>
+                    <p class="program-heading-schedule-desc">
+                      Длительность<br />
+                      Нагрузка
+                    </p>
+                    <p class="program-heading-schedule-text">
+                      1,5 мес.<br />
+                      2-3 урока в неделю
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div class="program-module">
+                <p class="program-subtitle">
+                  МОДУЛЬ 1
+                </p>
+                <h4>
+                  Настройка камеры
+                </h4>
+                <ul class="program-list">
+                  <li>
+                    <p>
+                      1. С чего начать, чтобы стать фотографом
+                    </p>
+                  </li>
+                  <li>
+                    <p>
+                      2. В чем преимущество съемки в ручном режиме
+                    </p>
+                  </li>
+                  <li>
+                    <p>
+                      3. Что такое экспозиция
+                    </p>
+                  </li>
+                  <li>
+                    <p>
+                      4. Взаимосвязь выдержки, ИСО, диафрагмы
+                    </p>
+                  </li>
+                  <li>
+                    <p>
+                      5. Баланс белого
+                    </p>
+                  </li>
+                  <li>
+                    <p>
+                      6. Как настроить фокус, чтобы он перестал жить своей жизнью
+                    </p>
+                  </li>
+                  <li>
+                    <p>
+                      7. Cъемка в полуавтоматических режимах, приоритет диафрагмы и выдержки, плюсы и минусы этих режимов
+                    </p>
+                  </li>
+                  <li>
+                    <p>
+                      8. Частые ошибки новичков
+                    </p>
+                  </li>
+                </ul>
+                <div class="quote">
+                  <p class="quote-title">
+                    Результат модуля 1
+                  </p>
+                  <p class="quote-description">
+                    Разберетесь с 3-мя главными параметрами ручной съемки и научитесь быстро настраивать камеру.
+                  </p>
+                </div>
+              </div>
+              <div class="program-module">
+                <p class="program-subtitle">
+                  МОДУЛЬ 2
+                </p>
+                <h4>
+                  Фото и видео-съемка
+                </h4>
+                <ul class="program-list">
+                  <li>
+                    <p>
+                      1. С чего начать, чтобы стать фотографом
+                    </p>
+                  </li>
+                  <li>
+                    <p>
+                      2. В чем преимущество съемки в ручном режиме
+                    </p>
+                  </li>
+                  <li>
+                    <p>
+                      3. Что такое экспозиция
+                    </p>
+                  </li>
+                  <li>
+                    <p>
+                      4. Взаимосвязь выдержки, ИСО, диафрагмы
+                    </p>
+                  </li>
+                  <li>
+                    <p>
+                      5. Баланс белого
+                    </p>
+                  </li>
+                  <li>
+                    <p>
+                      6. Как настроить фокус, чтобы он перестал жить своей жизнью
+                    </p>
+                  </li>
+                  <li>
+                    <p>
+                      7. Cъемка в полуавтоматических режимах, приоритет диафрагмы и выдержки, плюсы и минусы этих режимов
+                    </p>
+                  </li>
+                  <li>
+                    <p>
+                      8. Частые ошибки новичков
+                    </p>
+                  </li>
+                </ul>
+                <div class="quote">
+                  <p class="quote-title">
+                    Результат модуля 2
+                  </p>
+                  <p class="quote-description">
+                    Разберетесь с 3-мя главными параметрами ручной съемки и научитесь быстро настраивать камеру.
+                  </p>
+                </div>
+              </div>
+            </section>
+            <section class="section works" id="works">
+              <h3>Работы учеников</h3>
+            </section>
+            <section class="section results" id="results">
+              <h3>Результаты учеников</h3>
+            </section>
+            <section class="section desc" id="desc">
+              <h3>Подробное описание</h3>
+              <div class="expand">
+                <div class="expand-container">
+                  <p class="desc-description">
+                    Обучаясь 2-3 часа в день, вы получите фундамент, который должен знать каждый фотограф. Освоите всю базу, которую будете применять на практике и сможете фотографировать за деньги.
+                    Обучаясь 2-3 часа в день, вы получите фундамент, который должен знать каждый фотограф. Освоите всю базу, которую будете применять на практике и сможете фотографировать за деньги.
+                    Обучаясь 2-3 часа в день, вы получите фундамент, который должен знать каждый фотограф. Освоите всю базу, которую будете применять на практике и сможете фотографировать за деньги.
+                  </p>
+                </div>
+                <div class="expand-action">
+                  <span>Показать еще:</span>
+                  <div>
+                    <img src="/assets/icons/arrow-down.svg" alt="expand icon" loading="lazy">
+                  </div>
+                </div>
+              </div>
+            </section>
+            <section class="section study" id="study">
+              <h3>Как проходит обучение</h3>
+              <p class="study-text">
+                Обучаясь 2-3 часа в день, вы получите фундамент, который должен знать каждый фотограф. Освоите всю базу, которую будете применять на практике и сможете фотографировать за деньги.
+              </p>
+            </section>
+            <section class="section greeting" id="greeting">
+              <h3>Познакомьтесь с автором!</h3>
+            </section>
+            <section class="section testimonials" id="testimonials">
+              <div class="testimonials-heading">
+                <h3>Отзывы</h3>
+                <div class="rating">
+                  <ul class="list">
+                    <li><img src="/assets/icons/star.svg" alt="rate star" loading="lazy"></li>
+                    <li><img src="/assets/icons/star.svg" alt="rate star" loading="lazy"></li>
+                    <li><img src="/assets/icons/star.svg" alt="rate star" loading="lazy"></li>
+                    <li><img src="/assets/icons/star.svg" alt="rate star" loading="lazy"></li>
+                    <li><img src="/assets/icons/star.svg" alt="rate star" loading="lazy"></li>
+                  </ul>
+                  <span>4,7</span>
+                </div>
+                <div class="empty"></div>
+              </div>
+              <div class="testimonials-container">
+                <ul class="testimonials-nav">
+                  <li class="testimonials-nav-item active">
+                    <p>
+                      Все оценки (<span>115</span>)
+                    </p>
+                  </li>
+                  <li class="testimonials-nav-item">
+                    <p>
+                      Супер! (<span>45</span>)
+                    </p>
+                  </li>
+                  <li class="testimonials-nav-item">
+                    <p>
+                      Хорошо (<span>35</span>)
+                    </p>
+                  </li>
+                  <li class="testimonials-nav-item">
+                    <p>
+                      Нормально (<span>10</span>)
+                    </p>
+                  </li>
+                  <li class="testimonials-nav-item">
+                    <p>
+                      Плохо (<span>1</span>)
+                    </p>
+                  </li>
+                  <li class="testimonials-nav-item">
+                    <p>
+                      Ужасно (<span>0</span>)
+                    </p>
+                  </li>
+                </ul>
+                <ul class="testimonials-list">
+                  <li class="testimonials-list-item">
+                    <div class="testimonials-list-item-info">
+                      <div class="testimonials-list-item-author">
+                        <div class="testimonials-list-item-authot-image">
+                          <img src="/assets/images/testimonial-author.png" alt="author image">
+                        </div>
+                        <a href="#" class="testimonials-list-item-author-name">
+                          Александра Александрова
+                        </a>
+                      </div>
+                      <div class="testimonials-list-item-stats">
+                        <p>
+                          <span>Пройдено:</span>
+                          <span>100% Курса</span>
+                        </p>
+                        <p>
+                          <span>Оценка:</span>
+                          <span>
+                            <span class="testimonial-rating">
+                              <span>
+                                <img src="/assets/icons/star.svg" alt="star">
+                              </span>
+                              <span>
+                                <img src="/assets/icons/star.svg" alt="star">
+                              </span>
+                              <span>
+                                <img src="/assets/icons/star.svg" alt="star">
+                              </span>
+                              <span>
+                                <img src="/assets/icons/star.svg" alt="star">
+                              </span>
+                              <span>
+                                <img src="/assets/icons/star.svg" alt="star">
+                              </span>
+                            </span>
+                          </span>
+                        </p>
+                      </div>
+                    </div>
+                    <div class="testimonials-list-item-desc">
+
+                    </div>
+                  </li>
+                </ul>
+                <div class="testimonials-actions">
+                  <p class="testimonials-actions-text">
+                    Хотите оставить свой отзыв?<br />
+                    Станьте участником и пройдите курс
+                  </p>
+                  <p class="testimonials-actions-load-more">Показать еще отзывы</p>
+                </div>
+              </div>
+            </section>
+            <section class="section questions" id="questions">
+              <h2>Вопросы и ответы</h2>
+              <ul class="questions-list">
+                <li class='questions-list-item'>
+                  <p class="accordion">
+                    Как принять участие?
+                    <span>
+                      <img src="/assets/icons/arrow-right.svg" alt="expand question">
+                    </span>
+                  </p>
+                  <div class="content">
+                    <p class="text">
+                      Чтобы принять участие нажимите принять участие
+                    </p>
+                  </div>
+                </li>
+                <li class='questions-list-item'>
+                  <p class="accordion">
+                    Как нажать принять участие?
+                    <span>
+                      <img src="/assets/icons/arrow-right.svg" alt="expand question">
+                    </span>
+                  </p>
+                  <div class="content">
+                    <p class="text">
+                      Чтобы принять участие нажимите принять участие
+                    </p>
+                  </div>
+                </li>
+                <li class='questions-list-item'>
+                  <p class="accordion">
+                    Что делать если нажать не “нажимается”? 
+                    <span>
+                      <img src="/assets/icons/arrow-right.svg" alt="expand question">
+                    </span>
+                  </p>
+                  <div class="content">
+                    <p class="text">
+                      Чтобы принять участие нажимите принять участие
+                    </p>
+                  </div>
+                </li>
+                <li class='questions-list-item'>
+                  <p class="accordion">
+                    Можно ли купить курс и не проходить его?
+                    <span>
+                      <img src="/assets/icons/arrow-right.svg" alt="expand question">
+                    </span>
+                  </p>
+                  <div class="content">
+                    <p class="text">
+                      Чтобы принять участие нажимите принять участие
+                    </p>
+                  </div>
+                </li>
+              </ul>
+              <div class="questions-actions">
+                <button class="button green">
+                  Задайте вопрос
+                  <span class="button-icon">
+                    <img src="/assets/icons/question.svg" alt="">
+                  </span>
+                </button>
+                <p>
+                  Есть вопрос о курсе? Задайте его школе
+                </p>
+              </div>
+            </section>
+          </div>
+          <div class="right">
+
+          </div>
+        </div>
+      </div>
+    </main>
+    <footer class="footer">
+      <div class="footer-top">
+        <div class="logos">
+          <div class="logo">
+            <img src="assets/images/getcourse-logo-large.svg" alt="getcourse logo" loading="lazy">
+          </div>
+          <p class="logos-desc">
+            Лучшие онлайн-курсы<br />от лучших школ и авторов
+          </p>
+        </div>
+        <div class="menu">
+          <div class="menu-btn">
+            <div class="logo">
+              <img src="assets/images/menu-btn.png" alt="" loading="lazy">
+            </div>
+            <span>Лучшие курсы</span>
+            <div class="burger">
+              <div class="line"></div>
+              <div class="line"></div>
+              <div class="line"></div>
+            </div>
+          </div>
+        </div>
+        <div class="additional">
+          <p>
+            Создайте свою онлайн-школу бесплатно
+          </p>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>© GetCourse 2021</p>
+        <div class="list">
+          <a href="#">О компании</a>
+          <a href="#">Политика персональных данных</a>
+        </div>
+      </div>
+    </footer>
+  </div>
+</body>
+</html>
