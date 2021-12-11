@@ -68,11 +68,11 @@ const testimonialsData = [
     id: 2,
     authorName: 'Александра Александрова',
     authorPhoto: '/assets/images/testimonial-author.png',
-    progress: '100%',
+    progress: '95%',
     rate: 5,
     title: 'Рекомендую. У меня получился отличный свитер!',
     advantages: 'не обязательно вязать с первого и даже со второго ряда. Т.е. по идее, вы можете начать вязать с любой точки, с любого ряда и получить при этом красивую и гармоничную вещь.',
-    disAdvantages: 'я все время находилась за компьютером, с которого мне было сложно выйти не в онлайн. И как-то все это не то.',
+    disAdvantages: 'test',
   },
   {
     id: 3,
@@ -98,17 +98,16 @@ const testimonialsData = [
     id: 3,
     authorName: 'Александра Александрова',
     authorPhoto: '/assets/images/testimonial-author.png',
-    progress: '100%',
+    progress: '10%',
     rate: 3,
     title: 'Рекомендую. У меня получился отличный свитер!',
-    advantages: 'не обязательно вязать с первого и даже со второго ряда. Т.е. по идее, вы можете начать вязать с любой точки, с любого ряда и получить при этом красивую и гармоничную вещь.',
-    disAdvantages: 'я все время находилась за компьютером, с которого мне было сложно выйти не в онлайн. И как-то все это не то.',
+    advantages: 'test',
   },
   {
     id: 3,
     authorName: 'Александра Александрова',
     authorPhoto: '/assets/images/testimonial-author.png',
-    progress: '100%',
+    progress: '70%',
     rate: 3,
     title: 'Рекомендую. У меня получился отличный свитер!',
     advantages: 'не обязательно вязать с первого и даже со второго ряда. Т.е. по идее, вы можете начать вязать с любой точки, с любого ряда и получить при этом красивую и гармоничную вещь.',
@@ -141,7 +140,7 @@ const testimonialsData = [
     progress: '100%',
     rate: 1,
     title: 'Фуууууу бек-бек',
-    disAdvantages: 'я все время находилась за компьютером, с которого мне было сложно выйти не в онлайн. И как-то все это не то.',
+    disAdvantages: ' не в онлайн. И как-то все это не то.',
   },
   {
     id: 5,
@@ -150,7 +149,21 @@ const testimonialsData = [
     progress: '100%',
     rate: 3,
     title: 'Фуууууу бек-бек',
-    disAdvantages: 'я все время находилась за компьютером, с которого мне было сложно выйти не в онлайн. И как-то все это не то.',
+    disAdvantages: 'о выйти не в онлайн. И как-то все это не то.',
+    media: [
+      {
+        title: 'Итоговая работа',
+        link: '/assets/images/diploma13.jpg'
+      },
+      {
+        title: 'Отзыв о курсе',
+        link: '/assets/images/diploma14.jpg'
+      },
+      {
+        title: 'Видео-отзыв',
+        link: '/assets/images/diploma15.jpg'
+      },
+    ],
   },
   {
     id: 6,
@@ -159,7 +172,7 @@ const testimonialsData = [
     progress: '100%',
     rate: 4,
     title: 'Фуууууу бек-бек',
-    disAdvantages: 'я все время находилась за компьютером, с которого мне было сложно выйти не в онлайн. И как-то все это не то.',
+    disAdvantages: 'торого мне было сложно выйти не в онлайн. И как-то все это не то.',
   },
 ]
 
@@ -177,7 +190,6 @@ const view = {
   5: defaultRenderedItems,
 }
 
-
 function filterRateParam(param) {
   if (param === 0) {
     return testimonialsData
@@ -188,10 +200,26 @@ function filterRateParam(param) {
 
 function renderTestimonialItem(it) {
   let rating = ''
+  let media = ''
 
   Array(it?.rate).fill('').map(() => {
     rating += '<span><img src="/assets/icons/star.svg" alt="star"></span>'
   })
+
+  if (it?.media) {
+    it.media.map(item => {
+      media += `
+       <li class="testimonials-list-item-media-item">
+        <div class="testimonials-list-item-media-preview">
+          <img src="${item?.link}" alt="preview" data-url="${item?.link}">
+        </div>
+        <p class="testimonials-list-item-media-desc">
+          ${item?.title}
+        </p>
+      </li>
+      `
+    })
+  }
 
   testimonialsList.insertAdjacentHTML( 'beforeend', `
      <li class="testimonials-list-item">
@@ -224,38 +252,17 @@ function renderTestimonialItem(it) {
           ${it?.title}
         </p>
         <div class="testimonials-list-item-desc-info">
-          <div class="testimonials-list-item-media half">
-            <ul class="testimonials-list-item-media-list">
-              <li class="testimonials-list-item-media-item">
-                <div class="testimonials-list-item-media-preview">
-                  <img src="/assets/images/course-video-preview.png" alt="preview">
-                </div>
-                <p class="testimonials-list-item-media-desc">
-                  Итоговая работа
-                </p>
-              </li>
-              <li class="testimonials-list-item-media-item">
-                <div class="testimonials-list-item-media-preview">
-                  <img src="/assets/images/course-video-preview.png" alt="preview">
-                </div>
-                <p class="testimonials-list-item-media-desc">
-                  Итоговая работа
-                </p>
-              </li>
-              <li class="testimonials-list-item-media-item">
-                <div class="testimonials-list-item-media-preview">
-                  <img src="/assets/images/course-video-preview.png" alt="preview">
-                </div>
-                <p class="testimonials-list-item-media-desc">
-                  Итоговая работа
-                </p>
-              </li>
-            </ul>
-          </div>
-          <div class="testimonials-list-item-testimonial half">
+          ${it?.media ? (`
+            <div class="testimonials-list-item-media half">
+              <ul class="testimonials-list-item-media-list">
+                ${media}
+              </ul>
+            </div>
+          `) : ''}
+          <div class="testimonials-list-item-testimonial ${it?.media?.length ? 'half' : 'full'}">
             ${it?.advantages ? (`
               <p class="testimonials-list-item-advantages">
-                <span>Не понравилось: </span>
+                <span>Понравилось: </span>
                 ${it?.advantages}
               </p>
             `) : ''}
@@ -275,7 +282,11 @@ function renderTestimonialItem(it) {
 function renderTestimonialList(param) {
   testimonialsList.innerHTML = ''
 
-  filterRateParam(param).slice(0, view[param]).map(renderTestimonialItem)
+  if (filterRateParam(param).length > 0) {
+    filterRateParam(param).slice(0, view[param]).map(renderTestimonialItem)
+  } else {
+    testimonialsList.innerHTML =  '<h3 style="display: block; margin: 0 auto; text-align: center">Нету отзывов</h3>'
+  }
 }
 
 renderTestimonialList(sortParam)
@@ -305,3 +316,9 @@ loadMoreBtn.addEventListener('click', () => {
   renderTestimonialList(sortParam)
 })
 
+
+
+// MODALS
+const medias = document.querySelectorAll('[data-url]')
+
+console.log(medias)
