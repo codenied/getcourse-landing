@@ -14,8 +14,15 @@ const accordions = document.querySelectorAll('.accordion')
 expandButtons.forEach(it => {
   it?.addEventListener('click', () => {
     const parent = it?.parentNode
+    const textContainer = it?.querySelector('span')
 
     parent.classList.toggle('expanded')
+
+    if (parent.className.includes('expanded')) {
+      textContainer.innerHTML = 'Свернуть:'
+    } else {
+      textContainer.innerHTML = 'Показать еще:'
+    }
   })
 })
 
@@ -33,6 +40,12 @@ accordions.forEach(it => {
 $('.author-preview-slider').slick({
   slidesToShow: 1,
   slidesToScroll: 1,
+  dots: true,
+});
+
+$('.results-slider').slick({
+  slidesToShow: 2,
+  slidesToScroll: 2,
   dots: true,
 });
 
