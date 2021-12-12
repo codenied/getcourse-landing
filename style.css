@@ -1945,12 +1945,131 @@ img {
 
 .right .card {
   margin-bottom: 12px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
 }
 
 .card .card-body,
 .card {
   border-radius: var(--border-radius-xl);
   overflow: hidden;
+}
+
+.compare-price {
+  position: relative;
+  font-weight: bold;
+  font-size: 20px;
+  line-height: 24px;
+  text-align: center;
+  color: #FF7557;
+}
+
+.compare-price::before {
+  position: absolute;
+  width: calc(100% - 4px);
+  height: calc(100% - 4px);
+  left: 50%;
+  top: 50%;
+  background-color: #fff;
+  border-radius: var(--border-radius-rounded);
+  transform: translate(-50%, -50%);
+  content: '';
+}
+
+.card-accordion-content {
+  display: none;
+  padding: 10px 0;
+  border-bottom: 2px solid #F1F1F1;
+}
+
+.card-accordion-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 0;
+  transition: border-color 0.2s;
+}
+
+.card-accordion:not(:last-child) .card-accordion-header {
+  border-bottom: 2px solid #F1F1F1;
+}
+
+.card-accordion.expanded .card-accordion-header {
+  border-color: transparent;
+}
+
+.card-accordion.expanded .card-accordion-header .price {
+  opacity: 0;
+}
+
+.card-accordion-header .price {
+  font-weight: normal;
+  font-size: 20px;
+  line-height: 27px;
+}
+
+.card-accordion.expanded .card-accordion-content {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  gap: 12px;
+}
+
+.card-accordion-header h4 {
+  position: relative;
+}
+
+.card-accordion-header .card-badge {
+  position: absolute;
+  left: calc(100% + 10px);
+  top: 2px;
+  display: flex;
+  align-items: center;
+  border-radius: var(--border-radius-rounded);
+  padding: 2px 3px;
+  background: linear-gradient(263.62deg, #FFEE57 0%, rgba(255, 255, 255, 0) 97.68%), #FFA31A;
+  gap: 3px;
+}
+
+.card-accordion-header .card-badge .icon {
+  width: 11px;
+  height: 11px;
+}
+
+.card-accordion-header .pricing {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.card-accordion-header .expand-icon {
+  width: 14px;
+  height: 14px;
+}
+
+.card-accordion-header .expand-icon img {
+  transition: transform 0.2s;
+  transform-origin: center;
+  object-fit: contain;
+}
+
+.card-accordion.expanded .card-accordion-header .expand-icon img {
+  transform: rotate(90deg);
+}
+
+.card-accordion-header .card-badge img {
+  object-fit: contain;
+}
+
+.card-accordion-header .card-badge span {
+  font-size: 10px;
+  line-height: 10px;
+  text-transform: uppercase;
+  color: var(--color-white);
+}
+
+.compare-price span {
+  position: relative;
+  z-index: 5;
 }
 
 .card-header {
@@ -1978,6 +2097,10 @@ img {
 }
 
 .card-body-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  gap: 15px;
   background: var(--bg-color-section);
   padding: 16px 28px;
 }
@@ -2025,6 +2148,18 @@ img {
   flex-wrap: nowrap;
 }
 
+.card-you-get .row a {
+  width: 15px;
+  height: 16px;
+  position: absolute;
+  right: -20px;
+  top: -2px;
+}
+
+.card-you-get .row a img {
+  object-fit: contain;
+}
+
 .card-you-get .heading {
   margin: 0 auto 12px;
   text-align: center;
@@ -2042,7 +2177,8 @@ img {
 }
 
 .card-you-get .row .desc {
-  width: 45%;
+  display: inline-block;
+  position: relative;
   font-size: 14px;
   line-height: 19px;
 }
@@ -2059,6 +2195,44 @@ img {
   font-size: 30px;
   line-height: 41px;
   margin-bottom: 14px;
+}
+
+.card-more-info .accordion {
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 22px;
+  text-decoration: underline;
+  color: var(--color-link);
+  text-align: center;
+  position: relative;
+}
+
+.card-more-info > *:not(.accordion) {
+  display: none;
+}
+
+.card-more-info.expanded > *:not(.accordion) {
+  display: block;
+}
+
+.card-more-info .accordion span {
+  position: absolute;
+  top: 50%;
+  left: 10px;
+  display: block;
+  width: 14px;
+  height: 14px;
+  transform: translateY(-50%);
+}
+
+.card-more-info .accordion span img {
+  object-fit: contain;
+  transform-origin: center;
+  transition: transform 0.2s;
+}
+
+.card-more-info.expanded span img {
+  transform: rotate(90deg);
 }
 
 .card-main-price .card-main-price-desc {
@@ -2144,3 +2318,98 @@ img {
   opacity: 0.75;
   text-decoration: underline;
 }
+
+/*MODAL*/
+.modal {
+  display: none;
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100vw;
+  height: 100vh;
+  max-height: 100vh;
+  max-width: 100vw;
+  overflow: hidden;
+  z-index: 100;
+}
+
+.modal-cover {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  background: rgba(3, 3, 3, 0.6);
+  backdrop-filter: blur(4px);
+  z-index: 1;
+}
+
+.modal-content {
+  position: relative;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 2;
+  padding: 4px;
+}
+
+.compare-price-modal .section {
+  position: relative;
+}
+
+.modal-close-btn {
+  transform-origin: center center;
+  position: absolute;
+  right: 24px;
+  top: 24px;
+  cursor: pointer;
+  width: 36px;
+  height: 36px;
+  z-index: 5;
+  transition: transform 0.2s, opacity 0.2s;
+}
+
+.modal-close-btn.invert {
+  filter: invert(1);
+}
+
+.modal-close-btn:hover {
+  transform: rotate(45deg);
+  opacity: 0.75;
+}
+
+.modal-close-btn img {
+  object-fit: contain;
+}
+
+.compare-price-modal-opened .compare-price-modal {
+  display: block;
+}
+
+.compare-price-modal .section .heading {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 24px;
+}
+
+.compare-price-modal .section .heading h2 {
+  text-align: center;
+  margin-bottom: 8px;
+}
+
+.compare-price-modal .section .heading .text {
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 22px;
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.compare-price-modal .section {
+  padding: 17px 29px 30px;
+  max-width: 1109px;
+  width: 100%;
+  margin: 0 auto;
+}
+

@@ -36,6 +36,25 @@ accordions.forEach(it => {
 
 
 
+// MODALS
+const body = document.querySelector('body')
+const compareButton = document.querySelector('.compare-price')
+const compareModal = document.querySelector('.compare-price-modal')
+
+compareButton.addEventListener('click', () => {
+  body?.classList.add('compare-price-modal-opened')
+
+  compareModal.querySelector('.modal-cover')?.addEventListener('click', () => {
+    body?.classList.remove('compare-price-modal-opened')
+  })
+})
+
+compareModal.querySelector('.modal-close-btn')?.addEventListener('click', () => {
+  body?.classList.remove('compare-price-modal-opened')
+})
+
+
+
 // SLIDERS
 $('.author-preview-slider').slick({
   slidesToShow: 1,
