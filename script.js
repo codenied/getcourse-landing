@@ -48,7 +48,16 @@ $('.results-slider').slick({
   slidesToScroll: 2,
   dots: true,
 });
-
+$('.author-works-slider').slick({
+  slidesToShow: 3,
+  slidesToScroll: 3,
+  dots: true,
+});
+$('.works-slider').slick({
+  slidesToShow: 3,
+  slidesToScroll: 3,
+  dots: true,
+});
 
 
 // TESTIMONIALS
