@@ -35,23 +35,46 @@ accordions.forEach(it => {
 })
 
 
+// SCROLL TO TOP
+const scrollToTop = document.querySelector('.scroll-to-top')
+
 
 // MODALS
 const body = document.querySelector('body')
+
+function closeModal(modal, className) {
+  modal.querySelector('.modal-cover')?.addEventListener('click', () => {
+    body?.classList.remove(className)
+  })
+
+  modal.querySelector('.modal-close-btn')?.addEventListener('click', () => {
+    body?.classList.remove(className)
+  })
+}
+
 const compareButton = document.querySelector('.compare-price')
 const compareModal = document.querySelector('.compare-price-modal')
+const authorBaseModal = document.querySelector('.author-base-modal')
+const authorBaseButton = document.querySelector('.video-preview-action')
+
+authorBaseButton.addEventListener('click', () => {
+  body?.classList.add('author-base-modal-opened')
+})
 
 compareButton.addEventListener('click', () => {
   body?.classList.add('compare-price-modal-opened')
 
-  compareModal.querySelector('.modal-cover')?.addEventListener('click', () => {
-    body?.classList.remove('compare-price-modal-opened')
-  })
+  $('.compare-price-slider').slick({
+    slidesToShow: 3,
+    infinite: false,
+    slidesToScroll: 3,
+    dots: true,
+  });
 })
 
-compareModal.querySelector('.modal-close-btn')?.addEventListener('click', () => {
-  body?.classList.remove('compare-price-modal-opened')
-})
+closeModal(compareModal, 'compare-price-modal-opened')
+closeModal(authorBaseModal, 'author-base-modal-opened')
+
 
 
 

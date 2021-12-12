@@ -12,6 +12,7 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick-theme.min.css">
   <script type="text/javascript" src="http://cdn.jsdelivr.net/jquery.slick/1.3.15/slick.min.js"></script>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -23,7 +24,8 @@
       <div class="content">
         <header class="header">
           <div class="logo">
-            <img src="assets/images/getcourse-logo-large.svg" alt="getcourse logo" loading="lazy">
+            <img src="assets/images/getcourse-logo-large.svg" class="desktop" alt="getcourse logo" loading="lazy">
+            <img src="assets/images/getcourse-logo-vetical.png" class="mobile" alt="getcourse logo" loading="lazy">
           </div>
           <div class="menu-btn">
             <div class="logo">
@@ -73,11 +75,11 @@
                   <span>Сертификат</span>
                 </div>
               </div>
-              <p class="text">
+              <p class="text desktop">
                 Освоение фундамента, который должен знать фотограф, чтобы делать задуманные кадры в разных условиях.
               </p>
             </div>
-            <div class="stats">
+            <div class="stats desktop">
               <ul>
                 <li>
                   <p class="text">5 613</p>
@@ -1594,7 +1596,14 @@
                     </div>
                     <div class="card-accordion">
                       <div class="card-accordion-header accordion">
-                        <h4>Оптимальный</h4>
+                        <h4>Оптимальный
+                          <span class="primary-badge">
+                            <span class="primary-badge-icon">
+                              <img src="/assets/icons/fire.svg" class="object-contain" alt="hit">
+                            </span>
+                            <span class="text">ХИТ</span>
+                          </span>
+                        </h4>
                         <div class="pricing">
                           <p class="price">
                             15 900 ₽
@@ -1833,6 +1842,9 @@
         </div>
       </div>
     </footer>
+    <div class="mobile-fixed-menu mobile">
+
+    </div>
     <div class="modal compare-price-modal">
       <div class="modal-cover"></div>
       <div class="modal-content">
@@ -1849,7 +1861,288 @@
               <span>СТАРТ: 25 НОЯБРЯ 18:00 МСК</span>
             </div>
           </div>
+          <div class="compare-price-slider">
+            <div class="compare-price-slide">
+              <h2>Стандарт</h2>
+              <div class="tags">
+                <ul>
+                  <li><span>Cамостоятельный</span></li>
+                  <li><span>Без проверки Д.З.</span></li>
+                </ul>
+              </div>
+              <p class="description">
+                Бонусы, что особенного входит в тариф, краткое описание почему стоит выбрать этот тариф на 3-5 строк
+              </p>
+              <div class="card-you-get">
+                <p class="heading">
+                  Что вы получите:
+                </p>
+                <div class="row">
+                  <p class="title">Длительность:</p>
+                  <p class="desc">1 месяц</p>
+                </div>
+                <div class="row">
+                  <p class="title">Интенсивность:</p>
+                  <p class="desc">2-4 урока в неделю</p>
+                </div>
+                <div class="row">
+                  <p class="title">Уроков:</p>
+                  <p class="desc">22</p>
+                </div>
+                <div class="row">
+                  <p class="title">Формат:</p>
+                  <p class="desc">самостоятельный</p>
+                </div>
+                <div class="row">
+                  <p class="title">Доступ:</p>
+                  <p class="desc">6 месяцев</p>
+                </div>
+                <div class="row">
+                  <p class="title">Гарантия:</p>
+                  <p class="desc underline">гарантия возврата
+                    <a href="#">
+                      <img src="/assets/icons/question-blue.svg" alt="question">
+                    </a>
+                  </p>
+                </div>
+              </div>
+              <p class="compare-price-slide-price">
+                6 900 ₽
+              </p>
+              <div class="card-take-part">
+                <button class="button red large">
+                  Принять участие
+                </button>
+                <p class="card-take-part-desc">
+                  Есть беспроцентная рассрочка<br /> на 3 месяца. 750 рублей в месяц.
+                </p>
+              </div>
+              <div class="compare-price-slide-question">
+                <a href="#">
+                  Задать вопрос
+                  <span class="icon">
+                    <img src="/assets/icons/question-outlined.svg" alt="question">
+                  </span>
+                </a>
+              </div>
+            </div>
+            <div class="compare-price-slide primary">
+              <span class="primary-badge">
+                <span class="primary-badge-icon">
+                  <img src="/assets/icons/fire.svg" class="object-contain" alt="hit">
+                </span>
+                <span class="text">ХИТ</span>
+              </span>
+              <h2>Оптимальный</h2>
+              <div class="tags">
+                <ul>
+                  <li><span>С куратором</span></li>
+                  <li><span>Проверка Д.З.</span></li>
+                </ul>
+              </div>
+              <p class="description">
+                Бонусы, что особенного входит в тариф, краткое описание почему стоит выбрать этот тариф на 3-5 строк
+              </p>
+              <div class="card-you-get">
+                <p class="heading">
+                  Что вы получите:
+                </p>
+                <div class="row">
+                  <p class="title">Длительность:</p>
+                  <p class="desc">1 месяц</p>
+                </div>
+                <div class="row">
+                  <p class="title">Интенсивность:</p>
+                  <p class="desc">2-4 урока в неделю</p>
+                </div>
+                <div class="row">
+                  <p class="title">Уроков:</p>
+                  <p class="desc">22</p>
+                </div>
+                <div class="row">
+                  <p class="title">Формат:</p>
+                  <p class="desc">самостоятельный</p>
+                </div>
+                <div class="row">
+                  <p class="title">Доступ:</p>
+                  <p class="desc">6 месяцев</p>
+                </div>
+                <div class="row">
+                  <p class="title">Гарантия:</p>
+                  <p class="desc underline">гарантия возврата
+                    <a href="#">
+                      <img src="/assets/icons/question-blue.svg" alt="question">
+                    </a>
+                  </p>
+                </div>
+              </div>
+              <p class="compare-price-slide-price">
+                15 900 ₽
+              </p>
+              <div class="card-take-part">
+                <button class="button red large">
+                  Принять участие
+                </button>
+                <p class="card-take-part-desc">
+                  Есть беспроцентная рассрочка<br /> на 3 месяца. 750 рублей в месяц.
+                </p>
+              </div>
+              <div class="compare-price-slide-question">
+                <a href="#">
+                  Задать вопрос
+                  <span class="icon">
+                    <img src="/assets/icons/question-outlined.svg" alt="question">
+                  </span>
+                </a>
+              </div>
+            </div>
+            <div class="compare-price-slide">
+              <h2>Максимальный</h2>
+              <div class="tags">
+                <ul>
+                  <li><span>С куратором</span></li>
+                  <li><span>Консультации</span></li>
+                </ul>
+              </div>
+              <p class="description">
+                Бонусы, что особенного входит в тариф, краткое описание почему стоит выбрать этот тариф на 3-5 строк
+              </p>
+              <div class="card-you-get">
+                <p class="heading">
+                  Что вы получите:
+                </p>
+                <div class="row">
+                  <p class="title">Длительность:</p>
+                  <p class="desc">1 месяц</p>
+                </div>
+                <div class="row">
+                  <p class="title">Интенсивность:</p>
+                  <p class="desc">2-4 урока в неделю</p>
+                </div>
+                <div class="row">
+                  <p class="title">Уроков:</p>
+                  <p class="desc">22</p>
+                </div>
+                <div class="row">
+                  <p class="title">Формат:</p>
+                  <p class="desc">самостоятельный</p>
+                </div>
+                <div class="row">
+                  <p class="title">Доступ:</p>
+                  <p class="desc">6 месяцев</p>
+                </div>
+                <div class="row">
+                  <p class="title">Гарантия:</p>
+                  <p class="desc underline">гарантия возврата
+                    <a href="#">
+                      <img src="/assets/icons/question-blue.svg" alt="question">
+                    </a>
+                  </p>
+                </div>
+              </div>
+              <p class="compare-price-slide-price">
+                29 900 ₽
+              </p>
+              <div class="card-take-part">
+                <button class="button red large">
+                  Принять участие
+                </button>
+                <p class="card-take-part-desc">
+                  Есть беспроцентная рассрочка<br /> на 3 месяца. 750 рублей в месяц.
+                </p>
+              </div>
+              <div class="compare-price-slide-question">
+                <a href="#">
+                  Задать вопрос
+                  <span class="icon">
+                    <img src="/assets/icons/question-outlined.svg" alt="question">
+                  </span>
+                </a>
+              </div>
+            </div>
+            <div class="compare-price-slide">
+              <h2>VIP</h2>
+              <div class="tags">
+                <ul>
+                  <li><span>С куратором</span></li>
+                  <li><span>Консультации</span></li>
+                </ul>
+              </div>
+              <p class="description">
+                Бонусы, что особенного входит в тариф, краткое описание почему стоит выбрать этот тариф на 3-5 строк
+              </p>
+              <div class="card-you-get">
+                <p class="heading">
+                  Что вы получите:
+                </p>
+                <div class="row">
+                  <p class="title">Длительность:</p>
+                  <p class="desc">1 месяц</p>
+                </div>
+                <div class="row">
+                  <p class="title">Интенсивность:</p>
+                  <p class="desc">2-4 урока в неделю</p>
+                </div>
+                <div class="row">
+                  <p class="title">Уроков:</p>
+                  <p class="desc">22</p>
+                </div>
+                <div class="row">
+                  <p class="title">Формат:</p>
+                  <p class="desc">самостоятельный</p>
+                </div>
+                <div class="row">
+                  <p class="title">Доступ:</p>
+                  <p class="desc">6 месяцев</p>
+                </div>
+                <div class="row">
+                  <p class="title">Гарантия:</p>
+                  <p class="desc underline">гарантия возврата
+                    <a href="#">
+                      <img src="/assets/icons/question-blue.svg" alt="question">
+                    </a>
+                  </p>
+                </div>
+              </div>
+              <p class="compare-price-slide-price">
+                129 900 ₽
+              </p>
+              <div class="card-take-part">
+                <button class="button red large">
+                  Принять участие
+                </button>
+                <p class="card-take-part-desc">
+                  Есть беспроцентная рассрочка<br /> на 3 месяца. 750 рублей в месяц.
+                </p>
+              </div>
+              <div class="compare-price-slide-question">
+                <a href="#">
+                  Задать вопрос
+                  <span class="icon">
+                    <img src="/assets/icons/question-outlined.svg" alt="question">
+                  </span>
+                </a>
+              </div>
+            </div>
+          </div>
         </section>
+      </div>
+    </div>
+    <div class="modal author-base-modal">
+      <div class="modal-cover"></div>
+      <div class="modal-content">
+        <div class="author-base-modal-wrapper">
+          <div class="modal-close-btn invert">
+            <img src="/assets/icons/close-icon.svg" alt="close icon">
+          </div>
+          <iframe
+            src="https://www.youtube.com/embed/aAxGTnVNJiE"
+            title="YouTube video player"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen
+          ></iframe>
+        </div>
       </div>
     </div>
   </div>
