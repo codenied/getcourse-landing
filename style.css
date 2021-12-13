@@ -892,6 +892,7 @@ h1, h2, h3, h4, h5, h6 {
 @media (max-width: 767px) {
   .wrapper .section {
     margin-bottom: 4px;
+    padding: 14px 22px;
   }
 }
 
@@ -1106,9 +1107,25 @@ h1, h2, h3, h4, h5, h6 {
 .study-text,
 .for-who-description {
   font-weight: normal;
-  font-size: 18px;
   line-height: 150%;
-  margin-top: 28px;
+}
+
+@media (max-width: 767px) {
+  .desc-description,
+  .study-text,
+  .for-who-description {
+    font-size: 14px;
+    margin-top: 18px;
+  }
+}
+
+@media (min-width: 768px) {
+  .desc-description,
+  .study-text,
+  .for-who-description {
+    font-size: 18px;
+    margin-top: 28px;
+  }
 }
 
 @media (max-width: 1023px) {
@@ -1156,9 +1173,20 @@ h1, h2, h3, h4, h5, h6 {
 .expand-action span {
   margin-right: 6px;
   font-weight: bold;
-  font-size: 16px;
   line-height: 130%;
   color: var(--color-link);
+}
+
+@media (max-width: 767px) {
+  .expand-action span {
+    font-size: 14px;
+  }
+}
+
+@media (min-width: 768px) {
+  .expand-action span {
+    font-size: 16px;
+  }
 }
 
 .expand-container {
