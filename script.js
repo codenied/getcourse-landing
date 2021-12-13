@@ -1,8 +1,13 @@
 // BURGER MENU
-const burger = document.querySelector('.burger')
+const burgerTop = document.querySelector('.burger-top')
+const burgerBottom = document.querySelector('.burger-bottom')
 
-burger?.addEventListener('click', () => {
-  document.querySelector('body').classList.toggle('menu-open')
+burgerTop?.addEventListener('click', () => {
+  document.querySelector('body').classList.toggle('menu-top-open')
+})
+
+burgerBottom?.addEventListener('click', () => {
+  document.querySelector('body').classList.toggle('menu-bottom-open')
 })
 
 
@@ -69,6 +74,23 @@ compareButton.addEventListener('click', () => {
     infinite: false,
     slidesToScroll: 3,
     dots: true,
+    responsive: [
+      {
+        breakpoint: 1023,
+        settings: {
+          slidesToShow: 2,
+          slidesToScroll: 2,
+        }
+      },
+      {
+        breakpoint: 767,
+        settings: {
+          arrows: false,
+          slidesToShow: 1,
+          slidesToScroll: 1,
+        }
+      },
+    ]
   });
 })
 
@@ -82,23 +104,79 @@ closeModal(authorBaseModal, 'author-base-modal-opened')
 $('.author-preview-slider').slick({
   slidesToShow: 1,
   slidesToScroll: 1,
+  infinite: false,
   dots: true,
+  responsive: [
+    {
+      breakpoint: 767,
+      settings: {
+        arrows: false,
+      }
+    },
+  ]
 });
 
 $('.results-slider').slick({
   slidesToShow: 2,
   slidesToScroll: 2,
   dots: true,
+  infinite: false,
+  responsive: [
+    {
+      breakpoint: 767,
+      settings: {
+        arrows: false,
+        slidesToShow: 1,
+        slidesToScroll: 1,
+      }
+    },
+  ]
 });
 $('.author-works-slider').slick({
   slidesToShow: 3,
   slidesToScroll: 3,
   dots: true,
+  infinite: false,
+  responsive: [
+    {
+      breakpoint: 1023,
+      settings: {
+        slidesToShow: 2,
+        slidesToScroll: 2,
+      }
+    },
+    {
+      breakpoint: 767,
+      settings: {
+        arrows: false,
+        slidesToShow: 1,
+        slidesToScroll: 1,
+      }
+    },
+  ]
 });
 $('.works-slider').slick({
   slidesToShow: 3,
   slidesToScroll: 3,
   dots: true,
+  infinite: false,
+  responsive: [
+    {
+      breakpoint: 1023,
+      settings: {
+        slidesToShow: 2,
+        slidesToScroll: 2,
+      }
+    },
+    {
+      breakpoint: 767,
+      settings: {
+        arrows: false,
+        slidesToShow: 1,
+        slidesToScroll: 1,
+      }
+    },
+  ]
 });
 
 

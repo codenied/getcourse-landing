@@ -87,6 +87,11 @@ body {
   font-family: var(--font-main);
 }
 
+.get-course.page {
+  max-width: 100vw;
+  overflow-x: hidden;
+}
+
 ul, ol {
   margin: 0;
   padding: 0;
@@ -426,6 +431,8 @@ h1, h2, h3, h4, h5, h6 {
 
 /*MAIN*/
 .main {
+  position: relative;
+  z-index: 20;
   background-color: var(--bg-color);
 }
 
@@ -694,6 +701,7 @@ h1, h2, h3, h4, h5, h6 {
   .hero .tags ul span {
     font-size: 12px;
     line-height: 16px;
+    white-space: nowrap;
   }
 
   .hero h1 {
@@ -1254,10 +1262,6 @@ h1, h2, h3, h4, h5, h6 {
   gap: 1ch;
 }
 
-.author .achieves {
-  margin-top: 48px;
-}
-
 .author .achieves-list {
   margin-top: 16px;
   display: grid;
@@ -1265,20 +1269,13 @@ h1, h2, h3, h4, h5, h6 {
   gap: 18px;
 }
 
-.author .achieves-list-icon {
-  width: 17px;
-  height: 17px;
-}
-
 .author .achieves-list-number {
   font-weight: bold;
-  font-size: 24px;
   line-height: 150%;
 }
 
 .author .achieves-list-desc {
   font-weight: 500;
-  font-size: 12px;
   line-height: 110%;
   color: var(--color-text);
 }
@@ -1287,25 +1284,122 @@ h1, h2, h3, h4, h5, h6 {
   display: flex;
 }
 
-.author .author-data {
-  width: 60%;
+@media (max-width: 767px) {
+  .author .author-inner {
+    flex-direction: column-reverse;
+    gap: 48px;
+  }
+
+  .author .achieves-list-number {
+    font-size: 16px;
+  }
+
+  .author .achieves-list-desc {
+    font-size: 10px;
+  }
+
+  .author-preview h3 {
+    margin-top: 8px;
+    margin-bottom: 20px;
+  }
+
+  .author-preview-slider {
+    max-width: 66vw;
+  }
+
+  .author-preview-slider .slick-dots {
+    left: 15%;
+  }
+
+  .author-preview-slider .slick-list {
+    overflow: visible;
+  }
+
+  .author-preview-slider .author-preview-slide {
+    margin: 0 5px;
+  }
+
+  .section.author {
+    overflow: hidden;
+  }
+
+  .author .author-heading {
+    justify-content: center;
+  }
+
+  .author .achieves-list-icon {
+    width: 12px;
+    height: 12px;
+  }
+
+  .author .achieves {
+    margin-top: 18px;
+  }
+
+  .author-works-slider {
+    max-width: 190px;
+    margin-bottom: 28px;
+  }
+
+  .author-works-slider .slick-list {
+    overflow: visible;
+  }
+
+  .author-works-slider .slick-dots {
+    left: 15%;
+  }
+
+  .author-works-slider .slick-dots button::before {
+    font-size: 8px;
+  }
 }
 
-.author-data .expand {
-  max-width: 372px;
-}
+@media (min-width: 768px) {
+  .author .author-data {
+    width: 60%;
+  }
 
-.author .author-preview {
-  width: 40%;
+  .author .achieves {
+    margin-top: 48px;
+  }
+
+  .author .author-preview {
+    width: 40%;
+  }
+
+  .author-data .expand {
+    max-width: 372px;
+  }
+
+  .author .achieves-list-icon {
+    width: 17px;
+    height: 17px;
+  }
+
+  .author .achieves-list-number {
+    font-size: 24px;
+  }
+
+  .author .achieves-list-desc {
+    font-size: 12px;
+  }
+
+  .author-works-slider {
+    margin: 18px auto 32px;
+    max-width: 642px;
+  }
+
+  .author-works-slider .slick-dots button::before {
+    font-size: 18px;
+  }
+
+  .author-works-slider .slick-dots li {
+    margin-right: 6px;
+  }
 }
 
 .author .author-works {
   margin-top: 32px;
-}
-
-.author-works-slider {
-  margin: 18px auto 32px;
-  max-width: 642px;
 }
 
 .slick-dots li.slick-active button:before {
@@ -1328,14 +1422,6 @@ h1, h2, h3, h4, h5, h6 {
 
 .author-works-slider .slick-prev {
   left: -55px;
-}
-
-.author-works-slider .slick-dots li {
-  margin-right: 6px;
-}
-
-.author-works-slider .slick-dots button::before {
-  font-size: 18px;
 }
 
 .author-works-slide-wrapper {
@@ -1388,7 +1474,8 @@ h1, h2, h3, h4, h5, h6 {
   opacity: 1;
 }
 
-.author .author-heading-name h3 {
+.author .author-heading-name h3,
+.author .author-heading-name h1 {
   background: linear-gradient(270deg, #EF5D81, #C41BFD);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -1764,8 +1851,16 @@ h1, h2, h3, h4, h5, h6 {
   margin-left: 10px;
 }
 
-.author-preview-slide {
-  height: 287px;
+@media (max-width: 767px) {
+  .author-preview-slide {
+    height: 228px;
+  }
+}
+
+@media (min-width: 768px) {
+  .author-preview-slide {
+    height: 287px;
+  }
 }
 
 .accordion {
@@ -2766,6 +2861,12 @@ h1, h2, h3, h4, h5, h6 {
   padding: 16px 13px;
 }
 
+.button.small {
+  padding: 7px 8px;
+  font-size: 16px;
+  line-height: 22px;
+}
+
 .card-take-part .card-take-part-desc {
   margin-top: 17px;
   font-weight: normal;
@@ -3192,6 +3293,7 @@ h1, h2, h3, h4, h5, h6 {
   position: fixed;
   bottom: 0;
   left: 0;
+  z-index: 60;
   padding: 8px 26px;
   right: 0;
   width: 100vw;
