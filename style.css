@@ -1750,15 +1750,11 @@ h1, h2, h3, h4, h5, h6 {
 
 .program .program-heading-schedule-desc {
   font-weight: normal;
-  font-size: 14px;
-  line-height: 19px;
   color: var(--color-text);
 }
 
 .program .program-heading-schedule-text {
   font-weight: bold;
-  font-size: 14px;
-  line-height: 19px;
   color: var(--color-text);
 }
 
@@ -1770,10 +1766,55 @@ h1, h2, h3, h4, h5, h6 {
 .program .program-heading-schedule-content {
   position: relative;
   display: flex;
-  align-items: stretch;
-  flex-wrap: nowrap;
-  gap: 16px;
   z-index: 5;
+}
+
+@media (max-width: 767px) {
+  .program-heading h3 {
+    line-height: 84px;
+  }
+
+  .program .program-heading-schedule-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 13px;
+    flex-wrap: wrap;
+  }
+
+  .program .program-heading-schedule-desc,
+  .program .program-heading-schedule-text {
+    flex-basis: 45%;
+    flex-shrink: 0;
+  }
+
+  .program-heading-schedule-desc {
+    text-align: right;
+  }
+
+  .program-heading-schedule {
+    margin-left: auto;
+    max-width: 171px;
+  }
+
+  .program .program-heading-schedule-text,
+  .program .program-heading-schedule-desc {
+    font-size: 10px;
+    line-height: 14px;
+  }
+}
+
+@media (min-width: 768px) {
+  .program .program-heading-schedule-content {
+    align-items: stretch;
+    flex-wrap: nowrap;
+    gap: 16px;
+  }
+
+  .program .program-heading-schedule-text,
+  .program .program-heading-schedule-desc {
+    font-size: 14px;
+    line-height: 19px;
+  }
 }
 
 .swiper {
