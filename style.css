@@ -985,8 +985,8 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .diplom-list li {
+  flex-shrink: 0;
   width: 222px;
-  margin-right: 32px;
 }
 
 .diplom-list-image {
@@ -1019,11 +1019,6 @@ h1, h2, h3, h4, h5, h6 {
   color: var(--color-text);
 }
 
-.gives .quote {
-  margin-top: 16px;
-  margin-bottom: 38px;
-}
-
 @media (max-width: 767px) {
   .get-course .gives.section {
     padding: 14px 22px;
@@ -1046,6 +1041,35 @@ h1, h2, h3, h4, h5, h6 {
   .gives-list li::before {
     top: -3px;
   }
+
+  .gives .quote {
+    margin-top: 14px;
+    margin-bottom: 24px;
+  }
+
+  .diplom-list {
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+    width: calc(100vw - 8px);
+    padding: 0 22px 0 25px;
+    overflow-x: scroll;
+    overflow-y: visible;
+    flex-wrap: nowrap;
+    scrollbar-width: 0;
+  }
+
+  .diplom-list::-webkit-scrollbar {
+    display: none;
+  }
+
+  .diplom-list li {
+    margin-right: 15px;
+  }
+
+  .section.gives {
+    overflow: hidden;
+  }
 }
 
 @media (min-width: 768px) {
@@ -1067,8 +1091,16 @@ h1, h2, h3, h4, h5, h6 {
     font-size: 18px;
     line-height: 25px;
   }
-}
 
+  .gives .quote {
+    margin-top: 16px;
+    margin-bottom: 38px;
+  }
+
+  .diplom-list li {
+    margin-right: 32px;
+  }
+}
 
 .desc-description,
 .study-text,
