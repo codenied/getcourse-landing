@@ -242,6 +242,7 @@ h1, h2, h3, h4, h5, h6 {
 /*HEADER*/
 .get-course .header {
   position: relative;
+  z-index: 5;
   left: 50%;
   transform: translateX(-50%);
   max-width: 1300px;
@@ -879,8 +880,25 @@ h1, h2, h3, h4, h5, h6 {
   border-radius: var(--border-radius-rounded);
 }
 
+.badge-img {
+  width: 20px;
+  height: 20px;
+}
+
 .badge span {
   white-space: nowrap;
+}
+
+@media (max-width: 767px) {
+  .wrapper .section {
+    margin-bottom: 4px;
+  }
+}
+
+@media (min-width: 768px) {
+  .wrapper .section {
+    margin-bottom: 12px;
+  }
 }
 
 .info .text {
@@ -889,42 +907,12 @@ h1, h2, h3, h4, h5, h6 {
   color: var(--color-black);
 }
 
-.badge-img {
-  width: 20px;
-  height: 20px;
-}
-
 .divider-horizontal {
   background: linear-gradient(90deg, rgba(254,116,90,1) 0%, rgba(195,27,252,1) 100%);
 }
 
 .divider-vertical {
   background: linear-gradient(180deg, rgba(254,116,90,1) 0%, rgba(195,27,252,1) 100%);
-}
-
-.gives-list {
-  padding-left: 24px;
-  margin-top: 24px;
-}
-
-.gives-list li {
-  position: relative;
-  margin-bottom: 16px;
-}
-
-.gives-list li::before {
-  position: absolute;
-  top: 50%;
-  left: -20px;
-  font-size: 18px;
-  line-height: 25px;
-  transform: translateY(-50%);
-  content: '•';
-}
-
-.gives-list li p {
-  font-size: 18px;
-  line-height: 25px;
 }
 
 .quote {
@@ -946,16 +934,49 @@ h1, h2, h3, h4, h5, h6 {
 
 .quote .quote-title {
   font-weight: bold;
-  font-size: 14px;
-  line-height: 19px;
-  margin-bottom: 8px;
   color: var(--color-accent);
 }
 
 .quote .quote-description {
   font-weight: bold;
+}
+
+@media (max-width: 767px) {
+  .quote .quote-title {
+    font-size: 10px;
+    line-height: 14px;
+    margin-bottom: 3px;
+  }
+
+  .quote .quote-description {
+    font-size: 14px;
+    line-height: 19px;
+  }
+}
+
+@media (min-width: 768px) {
+  .quote .quote-title {
+    font-size: 14px;
+    line-height: 19px;
+    margin-bottom: 8px;
+  }
+
+  .quote .quote-description {
+    font-size: 18px;
+    line-height: 25px;
+  }
+}
+
+.gives-list li {
+  position: relative;
+}
+
+.gives-list li::before {
+  position: absolute;
+  left: -20px;
   font-size: 18px;
   line-height: 25px;
+  content: '•';
 }
 
 .diplom-list {
@@ -998,22 +1019,56 @@ h1, h2, h3, h4, h5, h6 {
   color: var(--color-text);
 }
 
-@media (max-width: 767px) {
-  .wrapper .section {
-    margin-bottom: 4px;
-  }
-}
-
-@media (min-width: 768px) {
-  .wrapper .section {
-    margin-bottom: 12px;
-  }
-}
-
 .gives .quote {
   margin-top: 16px;
   margin-bottom: 38px;
 }
+
+@media (max-width: 767px) {
+  .get-course .gives.section {
+    padding: 14px 22px;
+  }
+
+  .gives-list {
+    padding-left: 16px;
+    margin-top: 18px;
+  }
+
+  .gives-list li {
+    margin-bottom: 8px;
+  }
+
+  .gives-list li p {
+    font-size: 14px;
+    line-height: 19px;
+  }
+
+  .gives-list li::before {
+    top: -3px;
+  }
+}
+
+@media (min-width: 768px) {
+  .gives-list {
+    padding-left: 24px;
+    margin-top: 24px;
+  }
+
+  .gives-list li {
+    margin-bottom: 16px;
+  }
+
+  .gives-list li::before {
+    top: 50%;
+    transform: translateY(-50%);
+  }
+
+  .gives-list li p {
+    font-size: 18px;
+    line-height: 25px;
+  }
+}
+
 
 .desc-description,
 .study-text,
