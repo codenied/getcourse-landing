@@ -2502,9 +2502,31 @@ h1, h2, h3, h4, h5, h6 {
   line-height: 22px;
 }
 
-.results-slider {
-  margin: 40px auto 40px;
-  max-width: 636px;
+@media (max-width: 767px) {
+  .section.results {
+    overflow: hidden;
+  }
+
+  .results-slider {
+    padding: 2px;
+    margin: 20px 0 20px;
+    max-width: 260px;
+  }
+
+  .results-slider .slick-list {
+    overflow: visible;
+  }
+
+  .results-slider .slick-dots {
+    left: 15%;
+  }
+}
+
+@media (min-width: 768px) {
+  .results-slider {
+    margin: 40px auto 40px;
+    max-width: 636px;
+  }
 }
 
 .results-slide {
