@@ -81,7 +81,7 @@ html {
   scroll-behavior:smooth
 }
 
-.page,
+.get-course.page,
 body {
   color: var(--color-title);
   font-family: var(--font-main);
@@ -98,7 +98,7 @@ a {
   color: inherit;
 }
 
-img {
+.get-course img {
   display: block;
 }
 
@@ -126,18 +126,18 @@ h1, h2, h3, h4, h5, h6 {
   h6 {font-size: var(--heading-6-size);}
 }
 
-img {
+.get-course img {
   width: 100%;
   height: 100%;
   object-fit: cover;
   object-position: center;
 }
 
-body {
+.get-course-body {
   background: var(--bg-color);
 }
 
-.section {
+.get-course .section {
   padding: 21px 29px;
   border-radius: var(--border-radius-xl);
   margin: 0 auto;
@@ -158,7 +158,7 @@ body {
   .section {border-radius: var(--border-radius-xl);}
 }
 
-.page {
+.get-course.page {
   position: relative;
 }
 
@@ -208,39 +208,39 @@ body {
 }
 
 @media (max-width: 767px) {
-  .mobile {
+  .get-course .mobile {
     display: block;
   }
 
-  .desktop {
+  .get-course .desktop {
     display: none;
   }
 }
 
 @media (min-width: 768px) {
-  .mobile {
+  .get-course .mobile {
     display: none;
   }
 
-  .desktop {
+  .get-course .desktop {
     display: block;
   }
 }
 
-.underline {
+.get-course .underline {
   text-decoration: underline;
 }
 
-.object-contain {
+.get-course .object-contain {
   object-fit: contain;
 }
 
-.object-cover {
+.get-course .object-cover {
   object-fit: cover;
 }
 
 /*HEADER*/
-.header {
+.get-course .header {
   position: relative;
   left: 50%;
   transform: translateX(-50%);
@@ -1795,26 +1795,20 @@ body {
   width: 90px;
 }
 
-.testimonials-container {
-  max-width: 664px;
-  margin: 22px auto 0;
-}
-
 .testimonials-nav {
   display: flex;
   align-items: center;
   gap: 16px;
-  margin-bottom: 22px;
   flex-wrap: nowrap;
 }
 
 .testimonials-nav-item p {
-  font-weight: bold;
   font-size: 12px;
   line-height: 150%;
   position: relative;
   cursor: pointer;
   user-select: none;
+  white-space: nowrap;
 }
 
 .testimonials-nav-item p::after {
@@ -1879,10 +1873,107 @@ body {
 .testimonials-list-item {
   position: relative;
   display: flex;
-  gap: 16px;
-  padding: 16px 18px;
-  margin-bottom: 8px;
   border-radius: var(--border-radius-lg);
+}
+
+@media (max-width: 767px) {
+  .get-course .testimonials {
+    padding: 16px 15px 8px 22px;
+    overflow: hidden;
+  }
+
+  .testimonials-nav-item p {
+    color: var(--color-link);
+  }
+
+  .testimonials-nav-item.active p {
+    color: #C31AFF;
+  }
+
+  .testimonials-nav-item p::after {
+    background: #C31AFF;
+  }
+
+  .get-course .testimonials-list {
+    display: flex;
+    flex-wrap: nowrap;
+    overflow-x: scroll;
+    overflow-y: hidden;
+    padding: 2px 16px 2px 22px;
+    margin-top: 14px;
+    scrollbar-width: 0;
+  }
+
+  .testimonials-list::-webkit-scrollbar {
+    display: none;
+  }
+
+  .testimonials-list-item {
+    width: 240px;
+    flex-shrink: 0;
+    gap: 10px;
+    flex-direction: column;
+    padding: 16px 17px;
+    margin-right: 8px;
+    height: min-content;
+  }
+
+  .testimonials-list-item-desc-info {
+    flex-direction: column;
+  }
+
+  .testimonials-container {
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+    width: calc(100vw - 8px);
+    padding-top: 15px;
+    margin-top: 20px;
+  }
+
+  .testimonials-nav {
+    flex-wrap: nowrap;
+    overflow-y: visible;
+    overflow-x: scroll;
+    scrollbar-width: 0;
+    padding-bottom: 20px;
+    padding-left: 22px;
+    padding-right: 16px;
+  }
+
+  .testimonials-nav::-webkit-scrollbar {
+    display: none;
+  }
+}
+
+@media (min-width: 768px) {
+  .testimonials-list-item {
+    gap: 16px;
+    padding: 16px 18px;
+    margin-bottom: 8px;
+  }
+
+  .testimonials-list-item-media.half,
+  .testimonials-list-item-testimonial.half {
+    width: 50%;
+  }
+
+  .testimonials-container {
+    max-width: 664px;
+    margin: 22px auto 0;
+  }
+
+  .testimonials-nav-item p {
+    font-weight: bold;
+  }
+
+  .get-course .testimonials-list {
+    margin-top: 23px;
+  }
+
+  .testimonials-nav {
+    margin-bottom: 22px;
+  }
 }
 
 .testimonials-list-item-author {
@@ -1983,11 +2074,6 @@ body {
 .testimonials-list-item-desc-info {
   display: flex;
   gap: 16px;
-}
-
-.testimonials-list-item-media.half,
-.testimonials-list-item-testimonial.half {
-  width: 50%;
 }
 
 .testimonials-list-item-media.full,
