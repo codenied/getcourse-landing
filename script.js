@@ -12,34 +12,6 @@ burgerBottom?.addEventListener('click', () => {
 
 
 
-// EXPANDS
-const expandButtons = document.querySelectorAll('.expand-action')
-const accordions = document.querySelectorAll('.accordion')
-
-expandButtons.forEach(it => {
-  it?.addEventListener('click', () => {
-    const parent = it?.parentNode
-    const textContainer = it?.querySelector('span')
-
-    parent.classList.toggle('expanded')
-
-    if (parent.className.includes('expanded')) {
-      textContainer.innerHTML = 'Свернуть:'
-    } else {
-      textContainer.innerHTML = 'Показать еще:'
-    }
-  })
-})
-
-accordions.forEach(it => {
-  it?.addEventListener('click', () => {
-    const parent = it?.parentNode
-
-    parent.classList.toggle('expanded')
-  })
-})
-
-
 // SCROLL TO TOP
 const scrollToTop = document.querySelector('.scroll-to-top')
 
@@ -48,55 +20,60 @@ const scrollToTop = document.querySelector('.scroll-to-top')
 const body = document.querySelector('body')
 
 function closeModal(modal, className) {
-  modal.querySelector('.modal-cover')?.addEventListener('click', () => {
-    body?.classList.remove(className)
-  })
+  if (modal) {
+    modal?.querySelector('.modal-cover')?.addEventListener('click', () => {
+      body?.classList.remove(className)
+    })
 
-  modal.querySelector('.modal-close-btn')?.addEventListener('click', () => {
-    body?.classList.remove(className)
-  })
+    modal?.querySelector('.modal-close-btn')?.addEventListener('click', () => {
+      body?.classList.remove(className)
+    })
+  }
 }
 
-const compareButton = document.querySelector('.compare-price')
+const compareButtons = document.querySelectorAll('.compare-price')
 const compareModal = document.querySelector('.compare-price-modal')
 const authorBaseModal = document.querySelector('.author-base-modal')
-const authorBaseButton = document.querySelector('.video-preview-action')
+const authorBaseButtons = document.querySelectorAll('.video-preview-action')
 
-authorBaseButton.addEventListener('click', () => {
-  body?.classList.add('author-base-modal-opened')
+authorBaseButtons?.forEach(it => {
+  it.addEventListener('click', () => {
+    body?.classList.add('author-base-modal-opened')
+  })
 })
 
-compareButton.addEventListener('click', () => {
-  body?.classList.add('compare-price-modal-opened')
+compareButtons?.forEach(it => {
+  it.addEventListener('click', () => {
+    body?.classList.add('compare-price-modal-opened')
 
-  $('.compare-price-slider').slick({
-    slidesToShow: 3,
-    infinite: false,
-    slidesToScroll: 3,
-    dots: true,
-    responsive: [
-      {
-        breakpoint: 1023,
-        settings: {
-          slidesToShow: 2,
-          slidesToScroll: 2,
-        }
-      },
-      {
-        breakpoint: 767,
-        settings: {
-          arrows: false,
-          slidesToShow: 1,
-          slidesToScroll: 1,
-        }
-      },
-    ]
-  });
+    $('.compare-price-slider').slick({
+      slidesToShow: 3,
+      infinite: false,
+      slidesToScroll: 3,
+      dots: true,
+      responsive: [
+        {
+          breakpoint: 1023,
+          settings: {
+            slidesToShow: 2,
+            slidesToScroll: 2,
+          }
+        },
+        {
+          breakpoint: 767,
+          settings: {
+            arrows: false,
+            slidesToShow: 1,
+            slidesToScroll: 1,
+          }
+        },
+      ]
+    });
+  })
 })
 
 closeModal(compareModal, 'compare-price-modal-opened')
 closeModal(authorBaseModal, 'author-base-modal-opened')
-
 
 
 
@@ -115,7 +92,6 @@ $('.author-preview-slider').slick({
     },
   ]
 });
-
 $('.results-slider').slick({
   slidesToShow: 2,
   slidesToScroll: 2,
@@ -316,6 +292,15 @@ const testimonialsData = [
     title: 'Фуууууу бек-бек',
     disAdvantages: 'торого мне было сложно выйти не в онлайн. И как-то все это не то.',
   },
+  {
+    id: 6,
+    authorName: 'Александра Александрова',
+    authorPhoto: '/assets/images/testimonial-author.png',
+    progress: '100%',
+    rate: 1,
+    title: 'Фуууууу бек-бек',
+    disAdvantages: 'торого мне было сложно выйти не в онлайн. И как-то все это не то.',
+  },
 ]
 
 const testimonialsNavItems = document.querySelectorAll('.testimonials-nav-item')
@@ -402,7 +387,9 @@ function renderTestimonialItem(it) {
             </div>
           `) : ''}
           <div class="testimonials-list-item-testimonial ${it?.media?.length ? 'half' : 'full'}">
-            ${it?.advantages ? (`
+           <div class="expand">
+              <div class="expand-container">
+                         ${it?.advantages ? (`
               <p class="testimonials-list-item-advantages">
                 <span>Понравилось: </span>
                 ${it?.advantages}
@@ -414,6 +401,14 @@ function renderTestimonialItem(it) {
                 ${it?.disAdvantages}
               </p>
             `) : ''}
+              </div>
+              <div class="expand-action">
+                <span>Показать еще:</span>
+                <div>
+                  <img src="/assets/icons/arrow-down.svg" alt="expand icon" loading="lazy">
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </div>
@@ -449,6 +444,7 @@ testimonialsNavItems.forEach(it => {
     renderTestimonialList(sortParam)
 
     it.classList.toggle('active')
+    updatedUI()
   })
 })
 
@@ -456,11 +452,52 @@ loadMoreBtn.addEventListener('click', () => {
   view[sortParam] += 5
 
   renderTestimonialList(sortParam)
+  updatedUI()
 })
 
 
+function updatedUI() {
+  // MODALS
+  const medias = document.querySelectorAll('[data-url]')
+  const mediaModal = document.querySelector('.media-modal')
 
-// MODALS
-const medias = document.querySelectorAll('[data-url]')
+  medias?.forEach(it => {
+    it.addEventListener('click', () => {
+      const imagePreview = document.querySelector('img.media-modal-img-preview')
+      body?.classList.add('media-modal-opened')
+      imagePreview.src = it?.dataset.url
+    })
+  })
 
-console.log(medias)
+  closeModal(mediaModal, 'media-modal-opened')
+
+// EXPANDS
+  const expandButtons = document.querySelectorAll('.expand-action')
+  const accordions = document.querySelectorAll('.accordion')
+
+  expandButtons.forEach(it => {
+    it?.addEventListener('click', () => {
+      const parent = it?.parentNode
+      const textContainer = it?.querySelector('span')
+
+      parent.classList.toggle('expanded')
+
+      if (parent.className.includes('expanded')) {
+        textContainer.innerHTML = 'Свернуть:'
+      } else {
+        textContainer.innerHTML = 'Показать еще:'
+      }
+    })
+  })
+
+  accordions.forEach(it => {
+    it?.addEventListener('click', () => {
+      const parent = it?.parentNode
+
+      parent.classList.toggle('expanded')
+    })
+  })
+}
+
+updatedUI()
+
