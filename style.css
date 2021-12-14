@@ -3311,7 +3311,6 @@ h1, h2, h3, h4, h5, h6 {
   height: 100vh;
   max-height: 100vh;
   max-width: 100vw;
-  overflow: hidden;
   z-index: 100;
 }
 
@@ -3341,6 +3340,32 @@ h1, h2, h3, h4, h5, h6 {
 
 .compare-price-modal .section {
   position: relative;
+}
+
+.compare-price-modal .modal-content {
+  max-height: 100vh;
+  overflow-y: scroll;
+  overflow-x: hidden;
+  scrollbar-width: 0;
+}
+
+.compare-price-modal .modal-content::-webkit-scrollbar {
+  display: none;
+}
+
+@media (max-width: 767px) {
+  .compare-price-modal .modal-content .section {
+    padding: 18px 7px;
+    overflow: hidden;
+  }
+
+  .compare-price-modal .modal-content .compare-price-slider .slick-list {
+    overflow: visible;
+  }
+
+  .compare-price-modal .modal-content .compare-price-slider {
+    width: 85%;
+  }
 }
 
 .modal-close-btn {
@@ -3423,6 +3448,12 @@ h1, h2, h3, h4, h5, h6 {
 
 .compare-price-modal .modal-content {
   max-width: 1109px;
+}
+
+@media (min-width: 768px) {
+  .compare-price-modal .modal-content {
+    padding-top: 40px;
+  }
 }
 
 .compare-price-modal .section {
