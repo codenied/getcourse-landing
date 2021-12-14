@@ -10,10 +10,35 @@ burgerBottom?.addEventListener('click', () => {
   document.querySelector('body').classList.toggle('menu-bottom-open')
 })
 
+var lastScroll = 0;
+
+window.onscroll = function() {
+  let currentScroll = document.documentElement.scrollTop || document.body.scrollTop; // Get Current Scroll Value
+
+  if (currentScroll > 0 && lastScroll <= currentScroll){
+    lastScroll = currentScroll;
+    document.querySelector("body").classList.add('scroll-down')
+    document.querySelector("body").classList.remove('scroll-top')
+  }else{
+    lastScroll = currentScroll;
+    document.querySelector("body").classList.remove('scroll-down')
+    document.querySelector("body").classList.add('scroll-top')
+  }
+};
+
+
 
 
 // SCROLL TO TOP
 const scrollToTop = document.querySelector('.scroll-to-top')
+
+scrollToTop.addEventListener('click', () => {
+  window.scrollTo({
+    top: 0,
+    left: 0,
+    behavior: 'smooth'
+  });
+})
 
 
 // MODALS
