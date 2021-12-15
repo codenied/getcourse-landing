@@ -1066,6 +1066,12 @@ body .heading-6 {
   }
 }
 
+@media (min-width: 768px) {
+  .hero .heading-1 {
+    font-size: 36px;
+  }
+}
+
 .stats ul {
   display: flex;
   align-items: center;
@@ -1079,7 +1085,6 @@ body .heading-6 {
   .hero .heading-1 {
     text-align: center;
     max-width: 550px;
-    font-size: 36px;
   }
 }
 
