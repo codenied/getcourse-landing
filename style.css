@@ -348,7 +348,7 @@ body .heading-6 {
   top: 50%;
   left: 16px;
   transform: translateY(-50%);
-  background-image: url('/assets/icons/arrow-right-colored.svg');
+  background-image: url('https://fs.getcourse.ru/fileservice/file/download/a/76095/sc/240/h/2f55ca5ef4e01890652d0aeaed44368e.svg');
   background-position: center;
   background-repeat: no-repeat;
   background-size: contain;
@@ -356,16 +356,16 @@ body .heading-6 {
 
 .burger-menu-wrapper-list-right li:nth-child(1)::before {
   filter: invert(1);
-  background-image: url('assets/icons/gift-white.svg');
+  background-image: url('https://fs.getcourse.ru/fileservice/file/download/a/76095/sc/466/h/3e344617e070ee20782b09f65409704d.svg');
 }
 .burger-menu-wrapper-list-right li:nth-child(2)::before {
-  background-image: url('assets/icons/star-black.svg');
+  background-image: url('https://fs.getcourse.ru/fileservice/file/download/a/76095/sc/220/h/e79fa388d87e61170f3d188ef7a78d0b.svg');
 }
 .burger-menu-wrapper-list-right li:nth-child(3)::before {
-  background-image: url('assets/icons/fire-black.svg');
+  background-image: url('https://fs.getcourse.ru/fileservice/file/download/a/76095/sc/60/h/f8f70745b371f04c6352b575dc45077f.svg');
 }
 .burger-menu-wrapper-list-right li:nth-child(4)::before {
-  background-image: url('assets/icons/eye-balack.svg');
+  background-image: url('https://fs.getcourse.ru/fileservice/file/download/a/76095/sc/507/h/9b7813584d44c35a3c402c1348c4d712.svg');
 }
 
 .menu-top-open .burger-menu-wrapper,
@@ -2199,7 +2199,7 @@ body .heading-6 {
   width: 100%;
   height: 100%;
   display: block;
-  background-image: url('/assets/icons/arrow-right.svg');
+  background-image: url('https://fs.getcourse.ru/fileservice/file/download/a/76095/sc/30/h/3af832c954eda221fe418121601424d2.svg');
   background-repeat: no-repeat;
   background-position: center;
   background-size: contain;
@@ -3900,7 +3900,7 @@ body .heading-6 {
 .compare-price-slider .slick-next::before,
 .compare-price-slider .slick-prev::before {
   filter: unset;
-  background-image: url('/assets/icons/arrow-right-colored.svg');
+  background-image: url('https://fs.getcourse.ru/fileservice/file/download/a/76095/sc/240/h/2f55ca5ef4e01890652d0aeaed44368e.svg');
 }
 
 .primary-badge {
