@@ -447,7 +447,7 @@ function renderTestimonialList(param) {
   if (filterRateParam(param).length > 0) {
     filterRateParam(param).slice(0, view[param]).map(renderTestimonialItem)
   } else {
-    testimonialsList.innerHTML =  '<h3 style="display: block; margin: 0 auto; text-align: center">Нету отзывов</h3>'
+    testimonialsList.innerHTML =  '<h3 class="heading-3" style="display: block; margin: 0 auto; text-align: center">Нету отзывов</h3>'
   }
 }
 
